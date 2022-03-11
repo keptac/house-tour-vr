@@ -45,7 +45,7 @@ class HouseInfoPanel extends React.Component {
     return (
       <View>
         <View style={styles.infoPanel}>
-          <Text style={styles.header}>Room Info</Text>
+          <Text style={styles.header}>{this.props.roomName} Info</Text>
           <Text style={{fontSize: 20, textAlign: 'center', fontWeight: 'bold'}}>
             { this.props.info}
           </Text>

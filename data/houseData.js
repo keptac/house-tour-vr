@@ -2,10 +2,14 @@ export default house = {
   House: {
     roomName: 'House',
     info: `
-      * 4 bedroom
-      * 3 bath
-      * Priced at $180,000`,
+      * 4000 Square Meters
+      * 4 bedrooms
+      * 3 baths
+      * Priced at $180,000
+      * Address: 186 Helvetia Drive, Borrowdale, Harare
+      *View on Map`,
     adjacentRooms: ['Foyer'],
+    mapDetails: '186 Helvetia Drive, Borrowdale, Harare'
   },
   Foyer: {
     roomName: 'Foyer' ,
