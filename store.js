@@ -74,6 +74,7 @@ export function connect(Component) {
           roomName={this.state.roomName}
           info={this.state.info}
           adjacentRooms={this.state.adjacentRooms}
+          mapDetails={this.state.mapDetails}
         />
       )
     }
