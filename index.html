@@ -328,9 +328,10 @@
 
     <script>
       function myMap() {
+        const center = { lat: -17.824858, lng: 31.053028 };
         var mapProp= {
-          center:new google.maps.LatLng(-17.824858,31.053028),
-          zoom: 15,
+          center:new google.maps.LatLng(	-17.7399229,31.0968096),
+          zoom: 25,
           mapTypeId: "satellite",
         };
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
