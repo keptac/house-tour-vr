@@ -330,17 +330,16 @@
       function myMap() {
         const center = { lat: -17.824858, lng: 31.053028 };
         var mapProp= {
-          center:new google.maps.LatLng(	-17.7399229,31.0968096),
+          center:new google.maps.LatLng(-17.7399229,31.0968096),
           zoom: 25,
-          mapTypeId: "satellite",
+          mapTypeId: "hybrid",
         };
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
          // The location of mined from image and house location
-        const uluru = { lat: 	-17.7399229, lng: 31.0968096 };
-        map.setTilt(45);
+        const minedCoord = { lat: 	-17.7399229, lng: 31.0968096 };
         const marker = new google.maps.Marker({
-          position: uluru,
+          position: minedCoord,
           map: map,
         });
       }
