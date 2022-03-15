@@ -300,17 +300,10 @@
                 <li style="--accent-color:#E24A68">
                     <div class="date">HOUSE B</div>
                     <div class="title"></div>
-                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.</div>
                 </li>
                 <li style="--accent-color:#1B5F8C">
                     <div class="date">House C</div>
                     <div class="title"></div>
-                    <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
-                </li>
-                <li style="--accent-color:#4CADAD">
-                    <div class="date">House D</div>
-                    <div class="title"></div>
-                    <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
                 </li>
             </ul>
             <hr>
@@ -336,10 +329,19 @@
     <script>
       function myMap() {
         var mapProp= {
-          center:new google.maps.LatLng(51.508742,-0.120850),
-          zoom:5,
+          center:new google.maps.LatLng(-17.824858,31.053028),
+          zoom: 15,
+          mapTypeId: "satellite",
         };
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+         // The location of mined from image and house location
+        const uluru = { lat: 	-17.7399229, lng: 31.0968096 };
+        map.setTilt(45);
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
       }
 
       function enterApp() {
@@ -372,6 +374,6 @@
         }
       }
     </script>
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDdEJabdapF4SMTsqyWV1ij2k82Z8x2qA&callback=myMap"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYfNKUgubH2s8y4Usd4UBgyfAX094Qbhw&callback=myMap&v=weekly"></script>
   </body>
 </html>
