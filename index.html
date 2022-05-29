@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>HouseTourVR</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>body { margin: 0; }
@@ -196,150 +197,362 @@
         .button {
           border: none;
           color: white;
-          padding: 5px;
+          padding: 15px;
           text-align: center;
           text-decoration: none;
           display: inline-block;
-          font-size: 16px;
+          font-size: 20px;
           margin: 4px 100px 2px 100px;
         }
 
-      /* The Modal (background) */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-      }
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
 
-      /* Modal Content */
-      .modal-content {
-        width: 850px; /* Full width */
-        height: 850px; /* Full height */
-        position: relative;
-        background-color: #fefefe;
-        margin: auto;
-        padding: 0;
-        border: 1px solid #888;
-        /* width: 80%; */
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-        -webkit-animation-name: animatetop;
-        -webkit-animation-duration: 0.4s;
-        animation-name: animatetop;
-        animation-duration: 0.4s
-      }
+        /* Modal Content */
+        .modal-content {
+          width: 850px; /* Full width */
+          height: 850px; /* Full height */
+          position: relative;
+          background-color: #fefefe;
+          margin: auto;
+          padding: 0;
+          border: 1px solid #888;
+          /* width: 80%; */
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+          -webkit-animation-name: animatetop;
+          -webkit-animation-duration: 0.4s;
+          animation-name: animatetop;
+          animation-duration: 0.4s
+        }
 
-      /* Add Animation */
-      @-webkit-keyframes animatetop {
-        from {top:-300px; opacity:0} 
-        to {top:0; opacity:1}
-      }
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+          from {top:-300px; opacity:0} 
+          to {top:0; opacity:1}
+        }
 
-      @keyframes animatetop {
-        from {top:-300px; opacity:0}
-        to {top:0; opacity:1}
-      }
+        @keyframes animatetop {
+          from {top:-300px; opacity:0}
+          to {top:0; opacity:1}
+        }
 
-      /* The Close Button */
-      .close {
-        color: white;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-      }
+        /* The Close Button */
+        .close {
+          color: white;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
 
-      .close:hover,
-      .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-      }
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
 
-      .modal-header {
-        padding: 2px 16px;
-        background-color: #FBCA3E;
-        color: white;
-      }
+        .modal-header {
+          padding: 2px 16px;
+          background-color: #FBCA3E;
+          color: white;
+        }
 
-      .modal-body {
-        padding: 2px 16px;
-        width: 70%;
-      }
-</style>
+        .modal-body {
+          padding: 2px 16px;
+          width: 70%;
+        }
+
+        #placeHolder{
+          margin-top: -200px;
+        }
+        .comments{
+          width:       500px;
+          position:    fixed;
+          margin-left: 600px;
+          margin-top:  -400px;
+        }
+
+        .commentsection{
+          margin-top:  -50px;
+          margin-left: 600px;
+        }
+
+        nav{height:250px; }
+
+        nav{overflow:hidden; overflow-y:scroll;}
+
+        .button4-submit {border-radius: 20px;}
+
+        .button-submit {
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 10px;
+            margin-left:5px;
+          }
+
+        input {
+          width: 430px;
+          height: 50px;
+          padding-left: 10px;
+          border-radius: 5px;
+          border-color: #FBCA3E;
+        }
+
+        .be-comment-block {
+            margin-bottom: 50px !important;
+            border: 1px solid #edeff2;
+            border-radius: 2px;
+            /* padding: 50px 70px; */
+            border:1px solid #ffffff;
+        }
+
+        .comments-title {
+            font-size: 16px;
+            color: #262626;
+            margin-bottom: 15px;
+            font-family: 'Conv_helveticaneuecyr-bold';
+        }
+
+        .be-img-comment {
+            width: 30px;
+            height: 30px;
+            float: left;
+            margin-bottom: 15px;
+        }
+
+        .be-ava-comment {
+            width: 30px;
+            height:30px;
+            border-radius: 50%;
+        }
+
+
+        .be-comment-content span {
+            display: inline-block;
+            width: 49%;
+            margin-bottom: 15px;
+        }
+
+        .be-comment-name {
+            font-size: 13px;
+            font-family: 'Conv_helveticaneuecyr-bold';
+        }
+
+        .be-comment-content a {
+            color: #383b43;
+        }
+
+        .be-comment-content span {
+            display: inline-block;
+            width: 49%;
+            margin-bottom: 15px;
+        }
+
+        .be-comment-time {
+            text-align: right;
+        }
+
+        .be-comment-time {
+            font-size: 11px;
+            color: #b4b7c1;
+        }
+
+        .be-comment-text {
+            font-size: 13px;
+            line-height: 18px;
+            color: #7a8192;
+            display: block;
+            background: #f6f6f7;
+            border: 1px solid #edeff2;
+            padding: 15px 20px 20px 20px;
+        }
+
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
   <body>
-    <!-- Attachment point for your app -->
     <div id="initialize">
       <div id="placeHolder">
         <div class="container px-md-3 px-sm-0">
           <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
-            <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">House Tour VR</h3>
-            <h4 class="subtext-header mt-2 mb-4">Welcome to House Tour VR. View Real Estate in 360 degrees display through either desktop or headset.</h4>
+            <h3 class="display-4 font-weight-bold white-text mb-0 pt-md-5 pt-5">House Tour VR </h3>
+            <h4 class="subtext-header mt-2 mb-4">View real estate in 360 degrees display through either desktop.</h4>
             <br/> <br/>
             <ul>
                 <li style="--accent-color:#FBCA3E">
-                    <div class="date">HOUSE A</div>
+                    <div class="date">186 Helvetia Drive</div>
                     <div class="title"></div>
                     <div class="descr">Modern house located in a low density surburb sitting on 4000 m<sup>2</sup> land
-                      <br/> <br/>
+                      <br/> <br/><br/>
                       <div id="myBtn">
-                        <i class="material-icons" style="font-size:38px;">location_on</i>
+                        <button style="background-color:#b40404" class="button button4"  id="myBtn">
+                          <i class="material-icons" style="font-size:38px;">location_on</i>
+                        </button>
                         <br/> View On Maps
                       </div>
                     </div>
+                    <br/>
                     <button  style="background-color:#FBCA3E" class="button button4"  onClick="enterApp();">Start Tour</button>
                 </li>
-                <li style="--accent-color:#E24A68">
-                    <div class="date">HOUSE B</div>
-                    <div class="title"></div>
-                </li>
-                <li style="--accent-color:#1B5F8C">
-                    <div class="date">House C</div>
-                    <div class="title"></div>
-                </li>
             </ul>
+            <div class="comments card">
+              <div class="card-header">
+                Comments On Property
+              </div>
+              <div class="card-body">
+                <nav>
+                  <div id="allComments" class = "be-comment-block">
+
+
+                  </div>
+              </nav>
+              </div>
+            </div>
+            <div class="commentsection">
+              <form class="comments-form" id="usrform">
+                <input type="text" name="comment" placeholder="Add your comments">
+
+                <button style="background-color:#FBCA3E" class="button-submit button4-submit" type="submit">
+                  <i class="material-icons" style="font-size:18px;">send</i>
+                </button>
+              </form>
+            </div>
             <hr>
           </div>
         </div>
       </div>
     </div>
+
     <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
-          <h5>HOUSE A</h5>
+          <h5>186 Helvetia Drive</h5>
           <span class="close">&times;</span>
         </div>
         <div class="modal-body">
           <div id="googleMap" style="width:800px;height:800px;"></div>
         </div>
       </div>
-    
     </div>
+
+    <script>
+
+
+
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const formJSON = Object.fromEntries(data.entries());
+        appendSingleData(formJSON);
+
+
+        //SAVE TO COMMENTS RECORDS
+        fetch('comments.json')
+          .then(function (response) {
+              return response.json();
+          })
+          .then(function (data) {
+            data.push(formJSON)
+            const finalData = JSON.stringify(data);
+            //Save comments permanently
+          })
+          .catch(function (err) {
+              console.log('error: ' + err);
+          });
+      }
+
+      function appendSingleData(data) {
+          var mainContainer = document.getElementById("allComments");
+          var div = document.createElement("div");
+          div.innerHTML = `<div class='row be-comment'>
+              <div class='col-md-1 be-img-comment'>	
+                <a href='blog-detail-2.html'>
+                  <img src='https://ra.ac.ae/wp-content/uploads/2017/02/user-icon-placeholder.png' alt='' class='be-ava-comment'>
+                </a>
+              </div>
+              <div class='col-md-11 be-comment-content'>
+                <p class='be-comment-text'>
+                  `+data.comment+`
+                </p>
+              </div>
+            </div>`
+            mainContainer.appendChild(div);
+      }
+      
+      const form = document.querySelector('.comments-form');
+      form.addEventListener('submit', handleFormSubmit);
+    </script>
+
+    <script>
+      fetch('comments.json')
+          .then(function (response) {
+              return response.json();
+          })
+          .then(function (data) {
+              appendData(data);
+          })
+          .catch(function (err) {
+              console.log('error: ' + err);
+          });
+
+
+      function appendData(data) {
+          var mainContainer = document.getElementById("allComments");
+          for (var i = 0; i < data.length; i++) {
+              var div = document.createElement("div");
+              div.innerHTML = `<div class='row be-comment'>
+                
+                <div class='col-md-1 be-img-comment'>	
+                  <a href='blog-detail-2.html'>
+                    <img src='https://ra.ac.ae/wp-content/uploads/2017/02/user-icon-placeholder.png' alt='' class='be-ava-comment'>
+                  </a>
+                </div>
+                <div class='col-md-11 be-comment-content'>
+                  <p class='be-comment-text'>
+                    `+data[i].comment+`
+                  </p>
+                </div>
+              </div>`
+              mainContainer.appendChild(div);
+          }
+      }
+  </script>
+
 
     <script src="./client.bundle?platform=vr"></script>
 
     <script>
+      
       function myMap() {
         const center = { lat: -17.824858, lng: 31.053028 };
         var mapProp= {
-          center:new google.maps.LatLng(-17.7399229,31.0968096),
+          center:new google.maps.LatLng(	-17.7399229,31.0968096),
           zoom: 25,
-          mapTypeId: "hybrid",
+          mapTypeId: "satellite",
         };
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
          // The location of mined from image and house location
-        const minedCoord = { lat: 	-17.7399229, lng: 31.0968096 };
+        const uluru = { lat: 	-17.7399229, lng: 31.0968096 };
+    
         const marker = new google.maps.Marker({
-          position: minedCoord,
+          position: uluru,
           map: map,
         });
       }

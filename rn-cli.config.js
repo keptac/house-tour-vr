@@ -8,10 +8,10 @@ var config = {
     return getRoots();
   },
 
-  getBlacklistRE() {
-    return blacklist([
-    ]);
-  },
+  // getBlacklistRE() {
+  //   return blacklist([
+  //   ]);
+  // },
 
   getAssetExts() {
     return ['obj', 'mtl'];
